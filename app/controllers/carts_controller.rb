@@ -1,5 +1,7 @@
 class CartsController < ApplicationController
+  require 'pry'
   before_action :set_cart, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
   # GET /carts
   # GET /carts.json
   def index
@@ -9,6 +11,8 @@ class CartsController < ApplicationController
   # GET /carts/1
   # GET /carts/1.json
   def show
+  @user = current_user 
+  @cart = @user.cart  
   end
 
   # GET /carts/new
