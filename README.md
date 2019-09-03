@@ -18,3 +18,12 @@ Tu trouveras dans de ce Readme :
 
 #### Ruby  Version 2.5.1' | Rails Version 5.2.3'
 
+Partager ses crushs de lecture et découvrir les écrivaines talentueuses dont personne te parle jamais <br>
+
+Sur l’application ReadHer, on peut partager nos coups de coeur, revendre nos livres, <br> 
+orienter vers des plateformes de ventes alternatives ou vers des petites librairies 
+qu'on kiffe bien. <br>
+
+On peut même échanger avec d’autres lecteurs de notre ville,  <br>
+et en profiter pour se rencontrer autour d’un verre pour en parler.
+
