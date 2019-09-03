@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  devise_for :users, controllers: {  sessions: 'users/sessions'}
+  resources :carts
+  devise_for :users
   resources :items
   root to: 'items#index'
 end
