@@ -16,6 +16,5 @@ Tu trouveras dans de ce Readme :
 
 
 
-#### Ruby  Version 2.5.1' 
-#### Rails Version 5.2.3'
+#### Ruby  Version 2.5.1' | Rails Version 5.2.3'
 
