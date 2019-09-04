@@ -9,15 +9,15 @@ class LineItemsController < ApplicationController
           redirect_to new_user_registration_path
         else
           item = Item.find(params[:id])
-          current_user.current_cart.add_product(item)
-          if current_user.current_cart.save
-            redirect_to cart_path(current_user.current_cart)
+          @cart.add_product(item)
+          if @cart.save
+            redirect_to cart_path(@cart)
           end
         end
       end
       def destroy
         LineItem.find(params[:id]).destroy
-        redirect_to cart_path(current_user.current_cart)
+        redirect_to cart_path(@cart)
       end
 
   private
