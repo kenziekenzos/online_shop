@@ -11,7 +11,7 @@ class CartsController < ApplicationController
   # GET /carts/1
   # GET /carts/1.json
   def show
-  @cart = Cart.find_by(user_id: current_user.id)
+    @cart = Cart.find_by(user_id: current_user.id)
   end
 
   # GET /carts/new
@@ -39,11 +39,11 @@ class CartsController < ApplicationController
     end
   end
 
+
   # PATCH/PUT /carts/1
   # PATCH/PUT /carts/1.json
   def update
     respond_to do |format|
-      if @cart.update(cart_params)
         format.html { redirect_to @cart, notice: 'Cart was successfully updated.' }
         format.json { render :show, status: :ok, location: @cart }
       else
@@ -73,4 +73,3 @@ class CartsController < ApplicationController
     def cart_params
       params.fetch(:cart, {})
     end
-end

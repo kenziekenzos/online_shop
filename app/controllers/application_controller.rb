@@ -1,3 +1,5 @@
 class ApplicationController < ActionController::Base
-
-end 
+  # def current_cart
+  #   current_user.cart = @cart
+  # end
+end

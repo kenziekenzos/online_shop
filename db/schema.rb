@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 2019_09_03_200235) do
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.boolean "paid"
+    t.boolean "paid", default: false
     t.index ["user_id"], name: "index_carts_on_user_id"
   end
 
