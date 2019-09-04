@@ -63,7 +63,11 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 
 gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
-gem 'devise'
+gem 'devise', '~> 4.7'
 gem 'stripe'
 gem 'table_print'
+<<<<<<< HEAD
 gem 'dotenv-rails', '~> 2.1', '>= 2.1.1'
+=======
+gem 'pry'
+>>>>>>> develop

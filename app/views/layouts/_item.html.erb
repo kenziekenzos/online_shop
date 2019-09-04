@@ -1,0 +1,22 @@
+<link rel="stylesheet" href="stylesheet/lines.css">
+
+<div class="row">
+<% @items.each do |item| %>
+  <div class="col-md-4 col-md-4 mb-4">
+  <div class="card">
+          <div class="card-body">
+            <img class="card-img-top" src=<%= item.image_url %> alt="Card image cap" style="max-width:50%">
+            <h4 class="card-title"><%= item.title %></h4>
+            <h6 class="card-subtitle mb-2 text-muted"><%= item.price %></h6>
+            <p class="card-text"><%= item.description %></p>
+            <%= link_to 'Show', item %>
+            <a href="#" class="card-link">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+<% end %>
+
+</div>
+
+
+        
