@@ -9,4 +9,14 @@ class User < ApplicationRecord
   def create_cart
     Cart.create(user_id: self.id)
   end
+
+  def current_cart
+   Cart.find_by(user_id: self.id, paid: false)
+ end
+
+ def checkout
+   current_cart.update(paid: true)
+   create_cart
+ end
+ 
 end

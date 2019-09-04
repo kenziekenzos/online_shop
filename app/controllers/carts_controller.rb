@@ -39,6 +39,10 @@ class CartsController < ApplicationController
     end
   end
 
+  def add_to_cart
+      @cart.items << item
+  end
+
   # PATCH/PUT /carts/1
   # PATCH/PUT /carts/1.json
   def update
