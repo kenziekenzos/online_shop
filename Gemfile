@@ -66,8 +66,4 @@ gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'mast
 gem 'devise', '~> 4.7'
 gem 'stripe'
 gem 'table_print'
-<<<<<<< HEAD
 gem 'dotenv-rails', '~> 2.1', '>= 2.1.1'
-=======
-gem 'pry'
->>>>>>> develop
