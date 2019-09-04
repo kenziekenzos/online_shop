@@ -4,13 +4,21 @@ class LineItemsController < ApplicationController
     # def show
     #   @line_items = LineItem.all
     # end
-
     def create
-  # Find associated item and current cart
-      @line_items = LineItem.create(item_id: params[:item_id], cart_id: current_user.current_cart.id)
-      current_cart << @line_item.items
-      # redirect_to cart_path(current_cart)
-    end
+        if !user_signed_in?
+          redirect_to new_user_registration_path
+        else
+          item = Item.find(params[:id])
+          current_user.current_cart.add_product(item)
+          if current_user.current_cart.save
+            redirect_to cart_path(current_user.current_cart)
+          end
+        end
+      end
+      def destroy
+        LineItem.find(params[:id]).destroy
+        redirect_to cart_path(current_user.current_cart)
+      end
 
   private
     def set_line_item

@@ -22,4 +22,4 @@
 
 <%= link_to 'Edit', edit_item_path(@item) %> |
 <%= link_to 'Back', items_path %>
-<%= link_to "Add to cart", line_items_path(:item_id => item.id), method: :post%>
+<%= button_to "Ajouter au panier", line_items_path(:id => @item), :remote => true, class: 'btn btn-outline-primary btn-lg', method: :post %>
