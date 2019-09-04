@@ -3,20 +3,22 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
-  has_many :cart
-  after_create :create_cart
 
-  def create_cart
-    Cart.create(user_id: self.id)
+  has_many :carts
+  after_create :create_empty_cart
+
+  def create_empty_cart
+    Cart.create(user_id: id, paid: false)
   end
 
-  def current_cart
-   Cart.find_by(user_id: self.id, paid: false)
- end
+  def cart
+    Cart.find_or_create_by!(
+      user_id: id,
+      paid: false
+    )
+  end
 
- def checkout
-   current_cart.update(paid: true)
-   create_cart
- end
-
+  def checkout
+    cart.update(paid: true)
+  end
 end
