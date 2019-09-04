@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>OnlineShop</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -8,47 +10,18 @@
     <!--<p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p> -->
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+   <!-- <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %> -->
+    <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
     <%= csrf_meta_tags %>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
   </head>
 
   <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <%= render 'layouts/navbar' %>
 
-  <a class="navbar-brand" <%= link_to "Cats Shop", items_path, :class => "dropdown-item" %> </a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-<a class="navbar-brand" <%= link_to "Your cart",items_path, :class => "dropdown-item" %> </a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-        </li>
-      </ul>
-
-      <li class="nav-item dropdown form-inline my-2 my-lg-0">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown
-        </a>
-        <% if current_user == nil %>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a <%= link_to "Login", new_user_session_path, :class => "dropdown-item" %> </a>
-          <a <%= link_to "Create Account", new_user_registration_path, :class => "dropdown-item" %> </a>
-        </div>
-        <% else %>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a <%= link_to "Sign out", destroy_user_session_path, :class => "dropdown-item", method: :delete %> </a>
-        </div>
-        <% end %>
-      </li>
-  </div>
-
-</nav>
     <%= yield %>
   </body>
 </html>
