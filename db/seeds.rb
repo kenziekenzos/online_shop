@@ -12,15 +12,22 @@ User.destroy_all
 Item.destroy_all
 
 #ITEM
- def prepare
+
+
+ 
+
+
+
+  def prepare
+
     title = Faker::Name.first_name
- description = Faker::Lorem.paragraph
- price = Faker::Number.decimal(l_digits: 2)
- image_url = Faker::LoremPixel.image(size: "100x100", is_gray: false, category: 'cats')
+    description = Faker::Lorem.paragraph
+    price = Faker::Number.decimal(l_digits: 2)
+    image_url = Faker::LoremPixel.image(size: "100x100", is_gray: false, category: 'cats')
     {title: title, description: description, price: price, image_url: image_url}
   end
 
-  10.times do
+  10.times do 
     item = Item.create(prepare)
   end
   puts "\nTotal item created: #{Item.all.count}"
