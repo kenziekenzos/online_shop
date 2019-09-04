@@ -3,7 +3,7 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
-  has_one :cart
+  has_many :cart
   after_create :create_cart
 
   def create_cart
@@ -18,5 +18,5 @@ class User < ApplicationRecord
    current_cart.update(paid: true)
    create_cart
  end
- 
+
 end
