@@ -7,13 +7,13 @@
       <div class="col-sm-5">
           <p id="notice"><%= notice %></p>
 
-          <h2 class="display-2"> <%= @item.title %></h2>
+          <h2 class="display-2" id="title"> <%= @item.title %></h2>
          
           
           <p class="h3"><%= @item.description %></p>
           <hr class="my-4">
         
-        <button type="button" class="btn btn-light disabled">  <%= @item.price %>$</button>
+        <button type="button" class="btn btn-light disabled" id="item-price">  <%= @item.price %>$</button>
 
         <div class="row">
             <br>
@@ -25,7 +25,7 @@
       </div>
 
       <div class="col-md-3" id="add-cart">
-      <%= link_to 'Ajouter au panier', line_items_path(:id => @item), :remote => true, class: 'btn btn-secondary', method: :post %>
+      <%= link_to 'Add to cart', line_items_path(:id => @item), :remote => true, class: 'btn btn-outline-dark', method: :post %>
     
          </div>
     </div>

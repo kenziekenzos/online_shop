@@ -22,10 +22,13 @@
           <td><button type="button" class="btn btn-secondary btn-sm" id="remove-btn"> <%= link_to "Remove from cart", line_item_path(line_item.id), :method=>:delete, :remote => true %></button></td>
         </tr>
       <% end %>
-      <p>Total: <%= current_user.cart.total_price %> euros<p>
 
       </tbody>
-    </table>
+
+    </table>   <div class="card-footer text-right"id="item-total">
+    <p>Total: <%= current_user.cart.total_price %> euros<p>
+
+  </div>    
     <div class="d-flex bd-highlight">
     <div class="p-2 flex-fill bd-highlight align-items-end" id="btn-right"><div class="btn btn-success" id="back" ><%= link_to 'Back', items_path %></div></div>
     <div class="p-2 flex-fill bd-highlight align-items-end" id="btn-right"><div class="btn btn-secondary" id="order" ><%= link_to 'Order', new_charge_path%></div></div>
