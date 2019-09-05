@@ -1,5 +1,8 @@
 class ApplicationController < ActionController::Base
-  # def current_cart
-  #   current_user.cart = @cart
-  # end
+  before_action :set_cart
+
+  def set_cart
+    @cart = current_user.cart
+  end
+
 end
