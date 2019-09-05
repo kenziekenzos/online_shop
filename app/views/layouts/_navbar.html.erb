@@ -1,15 +1,15 @@
 <link rel="stylesheet" href="stylesheets/style.css">
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light " id="nav-color">
 
-  <a class="navbar-brand" id="navbar" <%= link_to "Cats Shop", root_path, :class => "dropdown-item" %> </a>
+  <a class="navbar-brand" id="navbar" <%= link_to "Cats’ Shop", root_path, :class => "dropdown-item" %> </a>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <% if current_user %>
 
-  <a class="navbar-brand" <%= link_to "Your cart", cart_path(@cart), :class => "dropdown-item" %> </a>
+  <a class="navbar-brand" id="cart-title-navabar"<%= link_to "Your cart", cart_path(@cart), :class => "dropdown-item" %> </a>
 
   <% end %>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -21,12 +21,12 @@
         </li>
       </ul>
 
-      <li class="nav-item dropdown form-inline my-2 my-lg-0">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-         Mon profil
+      <li class="nav-item dropdown form-inline my-2 my-lg-0" id="cart-title-navabar" style="margin-right:40px">
+        <a class="nav-link dropdown-toggle" href="#" id="cart-title-navabar" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+         Profile
         </a>
         <% if current_user == nil %>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown" >
           <a <%= link_to "Login", new_user_session_path, :class => "dropdown-item" %> </a>
           <a <%= link_to "Create Account", new_user_registration_path, :class => "dropdown-item" %> </a>
         </div>

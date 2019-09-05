@@ -1,13 +1,20 @@
+#nav-color{background: peachpuff}
+#color-btn{background: peachpuff}
 #btn-add-cart {
     position: absolute;
-    bottom: 0%
+    bottom: 0%;
+    
 }
 
 #back {
     background: rgb(213, 193, 193);
     border: 0;
+    font-family: 'Hepta Slab';
+    font-weight:400;
 }
 
+#add-cart{font-family: 'Hepta Slab';
+    font-weight: 500}
 
 #back a:link {
     color: blue;
@@ -28,6 +35,8 @@
 
 
 #show {
+    font-family: 'Hepta Slab';
+    font-weight: 500;
     position: relative;
     right: 0
 }
@@ -42,7 +51,7 @@
 }
 
 #show a:hover {
-    color: grey;
+    color: rgb(75, 28, 28);
     text-decoration: none
 }
 
@@ -53,7 +62,8 @@
 
 .card {
     border:0px;
-    box-shadow: 4px 9px 24px 0px rgba(224, 177, 153, 0.6)
+    box-shadow: 4px 9px 24px 0px rgba(224, 177, 153, 0.6);
+    
 }
 
 #navbarDropdown {
@@ -76,8 +86,10 @@
 
 
 #remove-btn {font-family: sans-serif;
-             background: rgb(72, 75, 66); 
-             border: 0;}
+             background: rgb(181, 76, 53); 
+             border: 0;
+             font-family: 'Hepta Slab';
+             font-weight: 400}
 
 #remove-btn a:link {
     color: white;
@@ -92,6 +104,8 @@
 #order {
     background: rgb(225, 170, 111);
     border: 0;
+    font-family: 'Hepta Slab';
+    font-weight: 400;
 }
 
 
@@ -131,3 +145,14 @@ h1 {
     font-family: 'Hepta Slab';
     font-weight: 400
 }
+#item-total {font-family: 'Hepta Slab';
+    font-weight: 500;}
+
+#cart-title-navabar{
+    color: black;
+    font-family: 'Hepta Slab';
+    font-weight: 400}
+
+#title{font-family: 'Hepta Slab';
+    font-weight: 600;}
+

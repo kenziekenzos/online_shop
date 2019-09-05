@@ -25,8 +25,8 @@ class ChargesController < ApplicationController
 
     if charge["paid"] == true
         current_user.checkout
-        puts "ok"
         UserNotifierMailer.send_confirmation_order(current_user).deliver
+        redirect_to root_path
     end
 
     rescue Stripe::CardError => e
