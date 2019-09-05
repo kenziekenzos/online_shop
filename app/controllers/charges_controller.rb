@@ -25,7 +25,6 @@ class ChargesController < ApplicationController
 
     if charge["paid"] == true
         current_user.checkout
-        puts "ok"
     end
 
     rescue Stripe::CardError => e
