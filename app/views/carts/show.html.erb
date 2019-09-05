@@ -17,9 +17,10 @@
       <td><%= line_item.item.description %></td>
       <td><%= line_item.item.price %></td>
       <td><%= line_item.item.image_url %></td>
-      <td><%= link_to "Supprimer du panier", line_item_path(line_item.id), :method=>:delete, :remote => true %></td>
+      <td class="btn btn-outline-danger"><%= link_to "Remove from cart", line_item_path(line_item.id), :method=>:delete, :remote => true %></td>
     </tr>
   <% end %>
   </tbody>
 </table>
-<%= link_to 'Back', carts_path %>
+    <p class="btn btn-outline-success mt-3"><%= link_to 'Order', new_charge_path%><p>
+    <p class="btn btn-outline-secondary"><%= link_to 'Back', carts_path %><p>
