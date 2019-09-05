@@ -21,4 +21,12 @@ class Cart < ApplicationRecord
      end
      current_item
   end
+
+  def total_price
+    sum = 0
+    self.line_items.each_with_index do |line_item, i|
+        sum += line_item.item.price
+    end
+    sum
+  end
 end

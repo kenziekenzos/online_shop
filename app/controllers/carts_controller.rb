@@ -12,11 +12,10 @@ class CartsController < ApplicationController
   def show
     @cart = Cart.find_by(user_id: current_user.id)
   end
-
-  def total
-    current_items = line_items.find_by(item_id: item.id)
-    current_items.price.sum(:count)
-  end
+  # def total_price
+  #   @cart.line_items.each_with_index do |line_item, i|
+  #   += i.line_item.item.price
+  # end
 
   # GET /carts/new
   def new
