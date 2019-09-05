@@ -5,7 +5,7 @@
                
 #back{background: rgb(213, 193, 193);
       border:0; 
-      text-color:white; 
+      ; 
       }
 
 
@@ -53,3 +53,38 @@
 padding-top: 10px; padding-bottom: 15px}
 
 
+#btn-right{ display: flex;
+    flex-direction: row-reverse;}
+
+
+    #element-center{ display: flex;  
+                 align-items: center;
+    }
+
+
+    #remove-btn a:link{
+        color: white;
+        text-decoration: none
+      }
+
+      #tableau{ display: flex;
+        justify-content: space-between;}
+
+        #order{background: rgb(225, 170, 111); border:0;}
+
+
+        #order a:link {
+            color:white;
+          }
+
+          #order a:visited {
+            color:white;
+          }
+
+          #order a:hover {
+            color: rgb(174, 138, 99);
+            text-decoration: none;
+          }
+          #order a:link {
+            color:white;
+          }
