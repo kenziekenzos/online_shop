@@ -12,8 +12,10 @@ class CartsController < ApplicationController
   def show
     @cart = Cart.find_by(user_id: current_user.id)
   end
-
-  
+  # def total_price
+  #   @cart.line_items.each_with_index do |line_item, i|
+  #   += i.line_item.item.price
+  # end
 
   # GET /carts/new
   def new
