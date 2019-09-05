@@ -1,8 +1,9 @@
 class ApplicationController < ActionController::Base
-  before_action :set_cart
+	before_action :set_cart
 
   def set_cart
-    @cart = current_user.cart
-  end
+    return unless current_user.present?
 
+    @cart = current_user.cart
+	end
 end

@@ -13,6 +13,8 @@ class CartsController < ApplicationController
     @cart = Cart.find_by(user_id: current_user.id)
   end
 
+  
+
   # GET /carts/new
   def new
     @cart = Cart.new
