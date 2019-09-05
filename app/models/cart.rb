@@ -3,14 +3,14 @@ class Cart < ApplicationRecord
   has_many :line_items
   has_many :items, through: :line_items
 
-  before_validation :check_for_other_empty_carts
-
-  def check_for_other_empty_carts
-    user = User.find(user_id)
-    return if user.carts.where(paid: false).blank?
-
-    errors.add(:cart, "L'utilisateur dispose déjà d'un panier")
-  end
+  # before_validation :check_for_other_empty_carts
+  #
+  # def check_for_other_empty_carts
+  #   user = User.find(user_id)
+  #   return if user.carts.where(paid: false).blank?
+  #
+  #   errors.add(:cart, "L'utilisateur dispose déjà d'un panier")
+  # end
 
   def add_product(item)
      current_item = line_items.find_by(item_id: item.id)

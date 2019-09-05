@@ -11,7 +11,8 @@
     </tr>
   </thead>
   <tbody>
-  <% @cart.line_items.each_with_index do |line_item, i| %>
+
+  <% current_user.cart.line_items.each_with_index do |line_item, i| %>
     <tr>
       <td><%= line_item.item.title %></td>
       <td><%= line_item.item.description %></td>
@@ -22,6 +23,6 @@
     <% end %>
   </tbody>
 </table>
-    <p>Total: <%= @cart.total_price %> euros<p>
+    <p>Total: <%= current_user.cart.total_price %> euros<p>
     <p class="btn btn-outline-success mt-3"><%= link_to 'Order', new_charge_path%><p>
     <p class="btn btn-outline-secondary"><%= link_to 'Back', carts_path %><p>

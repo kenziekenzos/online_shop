@@ -23,6 +23,10 @@ class ChargesController < ApplicationController
       currency: 'eur',
     })
 
+    if charge["paid"] == true
+        current_user.checkout
+        puts "ok"
+    end
 
     rescue Stripe::CardError => e
       flash[:error] = e.message
