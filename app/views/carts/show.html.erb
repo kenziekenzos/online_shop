@@ -17,7 +17,7 @@
         <tr>
           <td><strong><%= line_item.item.title %></strong></td>
           <td><%= line_item.item.description %></td>
-          <td class="text-monospace"><%= line_item.item.price %></td>
+          <td><%= line_item.item.price %></td>
           <td><img class="rounded" src="<%= line_item.item.image_url %>" style="width:50%"></td>
           <td><button type="button" class="btn btn-secondary btn-sm" id="remove-btn"> <%= link_to "Remove from cart", line_item_path(line_item.id), :method=>:delete, :remote => true %></button></td>
         </tr>
@@ -25,7 +25,7 @@
       </tbody>
     </table>
     <div class="d-flex bd-highlight">
-    <div class="p-2 flex-fill bd-highlight align-items-end" id="btn-right"><div class="btn btn-success" id="back" ><%= link_to 'Back', carts_path %></div></div>
+    <div class="p-2 flex-fill bd-highlight align-items-end" id="btn-right"><div class="btn btn-success" id="back" ><%= link_to 'Back', items_path %></div></div>
     <div class="p-2 flex-fill bd-highlight align-items-end" id="btn-right"><div class="btn btn-secondary" id="order" ><%= link_to 'Order', new_charge_path%></div></div>
     </div>
         </div>

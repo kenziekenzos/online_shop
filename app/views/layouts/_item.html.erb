@@ -6,8 +6,8 @@
   <div class="card">
           <div class="card-body">
             <img class="card-img-top" src=<%= item.image_url %> alt="Card image cap" style="max-width:50%">
-            <h4 class="card-title"style="margin-top:10px"><%= item.title %></h4>
-            <h6 class="card-subtitle mb-2 text-muted"><%= item.price %></h6>
+            <h4 class="card-title"style="margin-top:10px" id="item-title"><%= item.title %></h4>
+            <h6 class="card-subtitle mb-2 text-muted" id="item-price"><%= item.price %></h6>
             <p class="card-text" ><%= item.description %></p>
             <div id="show"><%= link_to 'Show', item %></div>
           </div>
