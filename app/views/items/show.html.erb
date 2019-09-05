@@ -1,26 +1,33 @@
-<div class="container">
-<p id="notice"><%= notice %></p>
+<link rel="stylesheet" src="stylesheets/style.css">
 
-<p>
-  <strong>Title:</strong>
-  <%= @item.title %>
-</p>
+<div class="container"><br><br>
+ 
+  <div class="row">
+    <div class="col-sm-4"> <br><img src=" <%= @item.image_url %>" class="card-img-top" alt="..."> </div>
+      <div class="col-sm-5">
+          <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @item.description %>
-</p>
+          <h2 class="display-2"> <%= @item.title %></h2>
+         
+          
+          <p class="h3"><%= @item.description %></p>
+          <hr class="my-4">
+        
+        <button type="button" class="btn btn-light disabled">  <%= @item.price %>$</button>
 
-<p>
-  <strong>Price:</strong>
-  <%= @item.price %>
-</p>
+        <div class="row">
+            <br>
+            <div class="col-md-5" id="btn-add-cart">
+            <button type="button" class="btn btn-success" id="back" ><%= link_to 'Back', items_path %></button>
+            
+            </div> 
+        </div>
+      </div>
 
-<p>
-  <strong>Image url:</strong>
-  <%= @item.image_url %>
-</p>
+      <div class="col-md-3" id="add-cart">
+      <%= link_to 'Ajouter au panier', line_items_path(:id => @item), :remote => true, class: 'btn btn-secondary', method: :post %>
+    
+         </div>
+    </div>
 
-<%= link_to 'Edit', edit_item_path(@item) %> |
-<%= link_to 'Back', items_path %>
-<%= link_to 'Ajouter au panier', line_items_path(:id => @item), :remote => true, class: 'btn btn-outline-primary btn-lg', method: :post %>
+</div>

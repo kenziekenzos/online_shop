@@ -1,0 +1,53 @@
+
+
+#btn-add-cart{ position: absolute;
+               bottom: 0%}
+               
+#back{background: rgb(213, 193, 193);
+      border:0; 
+      text-color:white; 
+      }
+
+
+     #back a:link {
+        color: blue;
+      }
+      #back a:visited {
+        color:white;
+      }
+      #back  a:hover {
+        color: rgb(198, 114, 114);
+        text-decoration: none
+      }
+      #back  a:active {
+        color: white;
+      }
+
+
+      #show{ position:relative; 
+        right: 0}
+
+
+      #show a:link {
+        color:black;
+      }
+    
+      #show a:visited {
+        color:rgb(0, 0, 0);
+      }
+    
+      #show a:hover {
+        color:grey;
+        text-decoration:none 
+      }
+    
+      #show a:active {
+        color:yellow;
+      }
+
+
+.card{
+     box-shadow:4px 9px 24px 0px rgba(224,177,153,0.6)}
+
+#navbarDropdown{color: black;
+padding-top: 10px; padding-bottom: 15px}

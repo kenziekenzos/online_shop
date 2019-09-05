@@ -8,22 +8,25 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-</head>
+    <link rel="stylesheet" src="stylesheets/style.css">
+
+    </head>
 <body>
 
     <p id="notice"><%= notice %></p>
-    <div class="col-11"> <h1>Items</h1> </div>
 
 
 <div class="container">
-  <div class="row" id="lines">
+<div class="col-12 text-center"> <h1>Discover our pictures!</h1><br><br> </div>
+
+  
+
      <%= render 'layouts/item' %>
      </div>
 </div>
     <br>
     <br>
 
-    <%= link_to 'New Item', new_item_path %>
 
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
