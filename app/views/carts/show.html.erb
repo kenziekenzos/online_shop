@@ -1,4 +1,5 @@
 <p id="notice"><%= notice %></p>
+<<<<<<< HEAD
 <table>
   <thead>
     <tr>
@@ -26,3 +27,43 @@
     <p>Total: <%= current_user.cart.total_price %> euros<p>
     <p class="btn btn-outline-success mt-3"><%= link_to 'Order', new_charge_path%><p>
     <p class="btn btn-outline-secondary"><%= link_to 'Back', carts_path %><p>
+=======
+<div class="container">
+    <div class="card" id="show-card">
+
+    <table class="table table-hover table-striped">
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Description</th>
+          <th>Price</th>
+          <th>Image url</th>
+          <th>Options</th>
+        </tr>
+      </thead>
+      <tbody>
+      <% @cart.line_items.each_with_index do |line_item, i| %>
+        <tr>
+          <td><strong><%= line_item.item.title %></strong></td>
+          <td><%= line_item.item.description %></td>
+          <td><%= line_item.item.price %></td>
+          <td><img class="rounded" src="<%= line_item.item.image_url %>" style="width:50%"></td>
+          <td><button type="button" class="btn btn-secondary btn-sm" id="remove-btn"> <%= link_to "Remove from cart", line_item_path(line_item.id), :method=>:delete, :remote => true %></button></td>
+        </tr>
+      <% end %>
+      </tbody>
+    </table>
+    <div class="d-flex bd-highlight">
+    <div class="p-2 flex-fill bd-highlight align-items-end" id="btn-right"><div class="btn btn-success" id="back" ><%= link_to 'Back', items_path %></div></div>
+    <div class="p-2 flex-fill bd-highlight align-items-end" id="btn-right"><div class="btn btn-secondary" id="order" ><%= link_to 'Order', new_charge_path%></div></div>
+    </div>
+        </div>
+
+
+</div>
+
+
+    
+ 
+   
+>>>>>>> b0e567d7cec486ba16baf77a0dd6a9316006b53f
