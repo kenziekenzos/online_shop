@@ -7,7 +7,7 @@
 
 
 version rails: 2.5.1
-version ruby :~> 5.2.3 
+version ruby : 5.2.3 
 
 ### Enjoy ! :)
 
