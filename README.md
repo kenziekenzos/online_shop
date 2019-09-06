@@ -14,4 +14,4 @@ version ruby :~> 5.2.3
 ### Team Cats Shop, made with  ✊ . Paris, La Felicità 🍕
 Tribute to our best mentors O & T 🍸
 
-
+© 2019 — natnatparis typhain kenziekenzos 
